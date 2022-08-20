@@ -15,7 +15,7 @@ def insert_record():
         emp_mail_id = request.json['mail']
         emp_sal = request.json['sal']
         emp_attendance = request.json['attndnc']
-        temp_var_data = f'insert into ineuron20.employee values({emp_id}, "{emp_name}", "{emp_mail_id}", {emp_sal}, "{emp_attendance}")'
+        temp_var_data = f'insert into ineuron20.employee values({emp_id}, "{emp_name}", "{emp_mail_id}", {emp_sal}, {emp_attendance})'
         cursor.execute(temp_var_data)
         mydb.commit()
         cursor.execute("select * from ineuron20.employee")
